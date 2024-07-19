@@ -90,9 +90,36 @@ Generates a response using the OpenAI assistant based on the input text.
 
 The application will be accessible at `http://127.0.0.1:8000` when using the default `--reload` configuration.
 
+Sure, here's the updated `README.md` including the new Docker commands:
+
+
+## Using Docker
+
+To containerize and deploy the application using Docker, follow these steps:
+
+1. **Build the Docker Image:**
+    ```sh
+    docker build -t chatgpt-project1 .
+    ```
+
+2. **Run the Docker Container:**
+    ```sh
+    docker run -d -p 8080:80 chatgpt-project1
+    ```
+
+3. **Tag the Docker Image:**
+    ```sh
+    docker tag chatgpt-project1 zacharynguyen092/chatgpt-project1
+    ```
+
+4. **Push the Docker Image to Docker Hub:**
+    ```sh
+    docker push zacharynguyen092/chatgpt-project1
+    ```
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
 
-This `README.md` now includes instructions for running the application in development mode with the `--reload` option.
+This `README.md` now includes detailed instructions for building, running, tagging, and pushing the Docker image for your project.
