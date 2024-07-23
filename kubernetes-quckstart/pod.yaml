@@ -1,0 +1,33 @@
+# Specify the API version being used
+apiVersion: v1
+
+# Define the kind of Kubernetes object, which in this case is a Pod
+kind: Pod
+
+# Metadata about the Pod
+metadata:
+  # Name of the Pod
+  name: myapp
+
+  # Labels to categorize the Pod
+  labels:
+    # Label with key 'name' and value 'myapp'
+    name: myapp
+
+    # Label indicating the environment (production in this case)
+    environment: prod
+
+# Specification of the Pod's desired state
+spec:
+  # List of containers within the Pod
+  containers:
+    # Define the first container
+  - name: myapp
+
+    # Docker image to use for this container
+    image: zacharynguyen092/custom-nginx
+
+    # List of ports to expose from the container
+    ports:
+      # Port to expose on the container
+      - containerPort: 80
