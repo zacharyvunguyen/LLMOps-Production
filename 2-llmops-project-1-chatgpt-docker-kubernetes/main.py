@@ -1,13 +1,15 @@
 from fastapi import FastAPI
 import uvicorn
-from config import api_key, assistant_id
+from config import assistant_id
 from pydantic import BaseModel
 from openai import OpenAI
+import os
 
 # Initialize the FastAPI app
 app = FastAPI()
 
 # Initialize the OpenAI client
+api_key=os.environ["OPENAI_API"]
 client = OpenAI(api_key=api_key)
 
 

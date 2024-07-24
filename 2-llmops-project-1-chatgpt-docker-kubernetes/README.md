@@ -117,6 +117,13 @@ To containerize and deploy the application using Docker, follow these steps:
     docker push zacharynguyen092/chatgpt-project1
     ```
 
+# Kubernetes Code
+1. **Create a secret key**
+```
+kubectl create secret generic openai-secret --from-literal=API_KEY=<api-key>
+docker build -t zacharynguyen092/chatgpt-project:v1 .
+docker push zacharynguyen092/chatgpt-project:v1
+```
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
